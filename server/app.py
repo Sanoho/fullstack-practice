@@ -1,5 +1,5 @@
 from models import User
-from config import api, app, db, abort
+from config import api, app, abort
 from flask_restful import Resource
 from flask import request, make_response, session
 
