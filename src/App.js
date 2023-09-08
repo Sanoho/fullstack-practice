@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {profiles.map((profile, index) => (
+        {profiles.map((profile) => (
           <img
-            key={index}
+            key={profile.id}
             width={"200px"}
             height={"200px"}
             src={profile.picture}
-            alt={`user-${index}`}
+            alt={profile.name}
           />
         ))}
         <p>
