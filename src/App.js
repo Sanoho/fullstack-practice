@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [profiles, setProfiles] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5555/users")
-      .then(response => response.json())
-      .then(data => setProfiles(data))
-      .catch(error => console.error('Error:', error));
+    fetch("/users")
+      .then((response) => response.json())
+      .then((data) => setProfiles(data))
+      .catch((error) => console.error("Error:", error));
   }, []);
 
   return (
