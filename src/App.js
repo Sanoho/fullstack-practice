@@ -15,25 +15,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         {profiles.map((profile) => (
-          <img
-            key={profile.id}
-            width={"200px"}
-            height={"200px"}
-            src={profile.picture}
-            alt={profile.name}
-          />
+          <div>
+            <img
+              key={profile.id}
+              width={"200px"}
+              height={"200px"}
+              src={profile.picture}
+              alt={profile.name}
+            />
+            <h5>{profile.username}</h5>
+            <p>{profile.email}</p>
+          </div>
         ))}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
