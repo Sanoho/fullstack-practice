@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
+import Login from "./components/Login.js"
+
+
 function App() {
   const [profiles, setProfiles] = useState([]);
 
@@ -13,6 +16,9 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+      <Login className="loginForm"/>
+      </div>
       <header className="App-header">
         {profiles.map((profile) => (
           <div>
@@ -25,6 +31,8 @@ function App() {
             />
             <h5>{profile.username}</h5>
             <p>{profile.email}</p>
+            <p>{profile.password}</p>
+            
           </div>
         ))}
       </header>
